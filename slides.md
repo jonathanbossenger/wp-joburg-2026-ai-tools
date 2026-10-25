@@ -33,6 +33,15 @@ A collection of WordPress AI tools and processes that I use/recommend.
   - How do you benchmark them for WordPress development
   - wp-bench
     - https://github.com/WordPress/wp-bench
+    - Example results, tested 25 October 2026
+      - Latest three models from OpenAI, Anthropic, Google
+        - Results dashboard
+          - https://wp-ai-benchmarks.space.fast/
+            - https://github.com/jonathanbossenger/wp-ai-benchmarks
+        - Caveat, it does come at a cost
+          - Average cost of one full run, per model: OpenAI $2.85, Anthropic $3.44, Google $4.09
+          - $31.13 for all nine models ($0.20 GPT-6 Luna to $7.00 Claude Opus 5.5)
+          - Gemini 4 Argon matched Claude Opus 5.5 at 90% for $0.94
 - Finding skills
   - Teach AI coding assistants how to build WordPress the right way.
   - agent-skills
