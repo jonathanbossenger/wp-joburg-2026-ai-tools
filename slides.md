@@ -15,6 +15,8 @@ A collection of WordPress AI tools and processes that I use/recommend.
   - Model selection
   - Finding skills
   - Personal agent 
+- Here be dragons
+  - AI is changing rapidly, so these tools may be outdated by the time you read this.
 - Site management
   - Controlling your WordPress site using MCP
   - https://github.com/jonathanbossenger/wordpress-mcp-plugins
@@ -33,15 +35,15 @@ A collection of WordPress AI tools and processes that I use/recommend.
   - How do you benchmark them for WordPress development
   - wp-bench
     - https://github.com/WordPress/wp-bench
-    - Example results, tested 25 October 2026
+    - Example results, tested 25–26 October 2026
       - Latest three models from OpenAI, Anthropic, Google
         - Results dashboard
           - https://wp-ai-benchmarks.space.fast/
             - https://github.com/jonathanbossenger/wp-ai-benchmarks
         - Caveat, it does come at a cost
-          - Average cost of one full run, per model: OpenAI $2.85, Anthropic $3.44, Google $4.09
-          - $31.13 for all nine models ($0.20 GPT-6 Luna to $7.00 Claude Opus 5.5)
-          - Gemini 4 Argon matched Claude Opus 5.5 at 90% for $0.94
+          - Average cost of one full run, per model: OpenAI $2.85, Anthropic $3.48, Google $4.09
+          - $31.23 for all nine models ($0.20 GPT-6 Luna to $7.10 Claude Opus 5.5)
+          - Gemini 4 Argon scored 90.0% for $0.94 vs Claude Opus 5.5 at 90.6% for $7.10
 - Finding skills
   - Teach AI coding assistants how to build WordPress the right way.
   - agent-skills
@@ -54,4 +56,6 @@ A collection of WordPress AI tools and processes that I use/recommend.
     - https://www.agentmail.to/
   - Talk to it via Discord
     - (live demo)
+  - Bonus tool: Spacefast
+    - https://spacefast.com/
 - Thank you/questions

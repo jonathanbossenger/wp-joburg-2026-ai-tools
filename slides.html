@@ -262,6 +262,25 @@
   .recap .k { font-size: 28px; font-weight: 600; }
   .recap .v { font-family: var(--mono); font-size: 22px; color: var(--muted); }
 
+  /* Here be dragons */
+  .dragons .top { position: relative; z-index: 1; }
+  .dragons .body { max-width: calc(50% - var(--pad-x)); }
+  .dragons .panel {
+    position: absolute; top: 0; right: 0; bottom: 0; width: 50%;
+    background: var(--card); display: flex; align-items: center; justify-content: center;
+    padding: 0 40px 64px;
+  }
+  .dragons .panel img { width: 100%; display: block; border: 1px solid var(--line); }
+
+  /* Spacefast bonus */
+  .wp-under { background: var(--elevated); border: 1px solid var(--line); border-radius: 14px; padding: 28px 32px; margin-bottom: 150px; }
+  .wp-under .tag { display: inline-block; margin-bottom: 20px; }
+  .wp-under ul.sq { gap: 14px; }
+  .wp-under ul.sq li { font-size: 24px; padding-left: 30px; }
+  .wp-under ul.sq li::before { width: 10px; height: 10px; background: var(--accent); }
+  .wp-under p { margin-top: 22px; font-size: 22px; line-height: 1.45; color: var(--muted); }
+  .wp-under p strong { color: var(--contrast); font-weight: 600; }
+
   /* ---------- Print: one slide per page ---------- */
   @page { size: 1600px 900px; margin: 0; }
   @media print {
@@ -321,6 +340,16 @@
         <div class="card"><span class="num">05</span><span class="ico">🤖</span><h4>Personal agent</h4><p>An assistant that runs anywhere</p></div>
       </div>
     </div>
+  </section>
+
+  <!-- Here be dragons -->
+  <section class="slide dragons">
+    <div class="top"><span class="eyebrow">Warning</span><span class="meta">WordCamp Johannesburg · 2026</span></div>
+    <div class="body">
+      <h2>Here be <em>dragons!</em></h2>
+      <p class="lede">AI is changing rapidly, so these tools may be outdated by the time you read this.</p>
+    </div>
+    <div class="panel"><img src="images/here-be-dragons.png" alt="&quot;Here be dragons&quot; sea serpent from an old map"></div>
   </section>
 
   <!-- ===================== 01 · Site management ===================== -->
@@ -484,19 +513,19 @@
   </section>
 
   <section class="slide">
-    <div class="top"><span class="eyebrow">Model selection</span><span class="meta">Tested 25 October 2026</span></div>
+    <div class="top"><span class="eyebrow">Model selection</span><span class="meta">Tested 25–26 October 2026</span></div>
     <div class="body">
       <h2 style="font-size:72px; margin-bottom:12px">Example <em>results</em></h2>
       <p class="lede" style="font-size:26px; margin-bottom:32px">Latest three models from OpenAI, Anthropic and Google · 350 tests each.</p>
       <div class="board">
-        <div class="lead"><span class="pos">1</span><span class="name">Gemini 4 Argon</span><span class="prov">Google</span><span class="bar"><i style="--w:90.0%"></i></span><span class="pts">90.0%</span></div>
-        <div class="lead"><span class="pos">1</span><span class="name">Claude Opus 5.5</span><span class="prov">Anthropic</span><span class="bar"><i style="--w:90.0%"></i></span><span class="pts">90.0%</span></div>
+        <div class="lead"><span class="pos">1</span><span class="name">Claude Opus 5.5</span><span class="prov">Anthropic</span><span class="bar"><i style="--w:90.6%"></i></span><span class="pts">90.6%</span></div>
+        <div><span class="pos">2</span><span class="name">Gemini 4 Argon</span><span class="prov">Google</span><span class="bar"><i style="--w:90.0%"></i></span><span class="pts">90.0%</span></div>
         <div><span class="pos">3</span><span class="name">GPT-6.1 Sol</span><span class="prov">OpenAI</span><span class="bar"><i style="--w:88.0%"></i></span><span class="pts">88.0%</span></div>
         <div><span class="pos">4</span><span class="name">GPT-6 Astra</span><span class="prov">OpenAI</span><span class="bar"><i style="--w:87.7%"></i></span><span class="pts">87.7%</span></div>
-        <div><span class="pos">5</span><span class="name">Claude Sonnet 5.5</span><span class="prov">Anthropic</span><span class="bar"><i style="--w:86.6%"></i></span><span class="pts">86.6%</span></div>
-        <div><span class="pos">6</span><span class="name">Gemini 3.8 Flash</span><span class="prov">Google</span><span class="bar"><i style="--w:85.1%"></i></span><span class="pts">85.1%</span></div>
-        <div><span class="pos">7</span><span class="name">Gemini 3.7 Flash</span><span class="prov">Google</span><span class="bar"><i style="--w:84.9%"></i></span><span class="pts">84.9%</span></div>
-        <div><span class="pos">8</span><span class="name">Claude Haiku 5.5</span><span class="prov">Anthropic</span><span class="bar"><i style="--w:80.6%"></i></span><span class="pts">80.6%</span></div>
+        <div><span class="pos">5</span><span class="name">Gemini 3.8 Flash</span><span class="prov">Google</span><span class="bar"><i style="--w:85.1%"></i></span><span class="pts">85.1%</span></div>
+        <div><span class="pos">6</span><span class="name">Gemini 3.7 Flash</span><span class="prov">Google</span><span class="bar"><i style="--w:84.9%"></i></span><span class="pts">84.9%</span></div>
+        <div><span class="pos">6</span><span class="name">Claude Sonnet 5.5</span><span class="prov">Anthropic</span><span class="bar"><i style="--w:84.9%"></i></span><span class="pts">84.9%</span></div>
+        <div><span class="pos">8</span><span class="name">Claude Haiku 5.5</span><span class="prov">Anthropic</span><span class="bar"><i style="--w:82.3%"></i></span><span class="pts">82.3%</span></div>
         <div><span class="pos">9</span><span class="name">GPT-6 Luna</span><span class="prov">OpenAI</span><span class="bar"><i style="--w:77.7%"></i></span><span class="pts">77.7%</span></div>
       </div>
       <p style="margin-top:28px"><a class="link" href="https://wp-ai-benchmarks.space.fast/">wp-ai-benchmarks.space.fast</a></p>
@@ -505,18 +534,18 @@
   </section>
 
   <section class="slide">
-    <div class="top"><span class="eyebrow">Model selection</span><span class="meta">Tested 25 October 2026</span></div>
+    <div class="top"><span class="eyebrow">Model selection</span><span class="meta">Tested 25–26 October 2026</span></div>
     <div class="body">
       <h2>Caveat: it does come at a <em>cost</em></h2>
       <p class="mono" style="font-size:20px; letter-spacing:.08em; text-transform:uppercase; color:var(--muted); margin-bottom:20px">Average cost of one full wp-bench run, per model</p>
       <div class="stats">
         <div class="stat"><b>$2.85</b><span>OpenAI</span></div>
-        <div class="stat"><b>$3.44</b><span>Anthropic</span></div>
+        <div class="stat"><b>$3.48</b><span>Anthropic</span></div>
         <div class="stat"><b>$4.09</b><span>Google</span></div>
       </div>
       <ul class="sq" style="max-width:1200px">
-        <li><strong>$31.13</strong> for all nine models.<span class="sub">From $0.20 (GPT-6 Luna) to $7.00 (Claude Opus 5.5) per run.</span></li>
-        <li>Same top score, very different bill.<span class="sub">Gemini 4 Argon matched Claude Opus 5.5 at 90% for $0.94.</span></li>
+        <li><strong>$31.23</strong> for all nine models.<span class="sub">From $0.20 (GPT-6 Luna) to $7.10 (Claude Opus 5.5) per run.</span></li>
+        <li>Near-identical top scores, very different bill.<span class="sub">Gemini 4 Argon scored 90.0% for $0.94; Claude Opus 5.5 scored 90.6% for $7.10.</span></li>
       </ul>
     </div>
   </section>
@@ -625,6 +654,47 @@
         </div>
       </div>
     </div>
+  </section>
+
+  <!-- ===================== Bonus · Spacefast ===================== -->
+  <section class="slide dark divider">
+    <div class="top"><span class="eyebrow">Section</span><span class="meta">WordCamp Johannesburg · 2026</span></div>
+    <div class="body">
+      <p class="num">BONUS</p>
+      <h2>Bonus <em>tool</em></h2>
+      <p class="lede">Publish anything your agent builds.</p>
+      <span class="bignum">+</span>
+    </div>
+  </section>
+
+  <section class="slide">
+    <div class="top"><span class="eyebrow">Bonus tool</span><span class="meta">WordCamp Johannesburg · 2026</span></div>
+    <div class="body">
+      <div class="split wide-left">
+        <div>
+          <h2><em>Spacefast</em></h2>
+          <p class="lede" style="margin:-12px 0 36px">Ask your AI to put it on Spacefast. Get a <strong>live link</strong> you can send to anyone.</p>
+          <div class="terminal" style="margin-bottom:28px">
+            <div><span class="p">$ </span>npx spacefast publish</div>
+            <div><span class="c">✓ Live at quiet-sun.space.fast</span></div>
+          </div>
+          <p class="fine" style="margin-top:0">The MCP plugin rankings, the benchmark dashboard, and these slides all run on it.</p>
+          <p style="margin-top:24px"><a class="link" href="https://spacefast.com/">spacefast.com</a></p>
+        </div>
+        <div class="wp-under">
+          <span class="tag">Powered by WordPress</span>
+          <ul class="sq">
+            <li>Runs on the same infrastructure as WordPress.com.</li>
+            <li>Every Space has a WordPress install underneath.</li>
+            <li>Its MySQL is your database. Its media library is your storage.</li>
+            <li>Drive it with WP-CLI and the Abilities API.</li>
+          </ul>
+          <p>The WordPress CMS, used in a <strong>whole new way</strong>: as the backend for whatever your agent builds.</p>
+        </div>
+      </div>
+    </div>
+    <div class="qr"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 27 27" shape-rendering="crispEdges"><path fill="#FFFFFF" d="M0 0h27v27H0z"/><path stroke="#1A1A1A" transform="translate(1,1.5)" d="M0,0h1M1,0h1M2,0h1M3,0h1M4,0h1M5,0h1M6,0h1M9,0h1M10,0h1M13,0h1M18,0h1M19,0h1M20,0h1M21,0h1M22,0h1M23,0h1M24,0h1M0,1h1M6,1h1M9,1h1M11,1h1M13,1h1M14,1h1M15,1h1M18,1h1M24,1h1M0,2h1M2,2h1M3,2h1M4,2h1M6,2h1M8,2h1M11,2h1M15,2h1M16,2h1M18,2h1M20,2h1M21,2h1M22,2h1M24,2h1M0,3h1M2,3h1M3,3h1M4,3h1M6,3h1M8,3h1M9,3h1M12,3h1M13,3h1M14,3h1M15,3h1M16,3h1M18,3h1M20,3h1M21,3h1M22,3h1M24,3h1M0,4h1M2,4h1M3,4h1M4,4h1M6,4h1M8,4h1M11,4h1M12,4h1M16,4h1M18,4h1M20,4h1M21,4h1M22,4h1M24,4h1M0,5h1M6,5h1M8,5h1M10,5h1M12,5h1M13,5h1M15,5h1M16,5h1M18,5h1M24,5h1M0,6h1M1,6h1M2,6h1M3,6h1M4,6h1M5,6h1M6,6h1M8,6h1M10,6h1M12,6h1M14,6h1M16,6h1M18,6h1M19,6h1M20,6h1M21,6h1M22,6h1M23,6h1M24,6h1M8,7h1M10,7h1M11,7h1M14,7h1M0,8h1M2,8h1M3,8h1M4,8h1M5,8h1M6,8h1M9,8h1M12,8h1M13,8h1M14,8h1M15,8h1M16,8h1M18,8h1M19,8h1M20,8h1M21,8h1M22,8h1M0,9h1M3,9h1M4,9h1M7,9h1M9,9h1M12,9h1M13,9h1M16,9h1M17,9h1M19,9h1M23,9h1M0,10h1M1,10h1M3,10h1M6,10h1M7,10h1M8,10h1M11,10h1M13,10h1M14,10h1M15,10h1M16,10h1M18,10h1M19,10h1M20,10h1M21,10h1M23,10h1M24,10h1M1,11h1M2,11h1M3,11h1M8,11h1M11,11h1M14,11h1M15,11h1M18,11h1M24,11h1M6,12h1M9,12h1M10,12h1M13,12h1M14,12h1M15,12h1M17,12h1M18,12h1M19,12h1M20,12h1M22,12h1M23,12h1M24,12h1M0,13h1M1,13h1M2,13h1M7,13h1M12,13h1M13,13h1M16,13h1M19,13h1M21,13h1M23,13h1M0,14h1M3,14h1M4,14h1M5,14h1M6,14h1M8,14h1M9,14h1M10,14h1M14,14h1M15,14h1M18,14h1M19,14h1M20,14h1M21,14h1M23,14h1M24,14h1M0,15h1M2,15h1M3,15h1M5,15h1M7,15h1M10,15h1M12,15h1M14,15h1M16,15h1M17,15h1M18,15h1M19,15h1M20,15h1M24,15h1M0,16h1M3,16h1M4,16h1M6,16h1M8,16h1M9,16h1M12,16h1M13,16h1M15,16h1M16,16h1M17,16h1M18,16h1M19,16h1M20,16h1M22,16h1M8,17h1M13,17h1M15,17h1M16,17h1M20,17h1M21,17h1M0,18h1M1,18h1M2,18h1M3,18h1M4,18h1M5,18h1M6,18h1M9,18h1M11,18h1M12,18h1M13,18h1M14,18h1M16,18h1M18,18h1M20,18h1M22,18h1M23,18h1M24,18h1M0,19h1M6,19h1M8,19h1M11,19h1M14,19h1M16,19h1M20,19h1M21,19h1M0,20h1M2,20h1M3,20h1M4,20h1M6,20h1M8,20h1M9,20h1M11,20h1M15,20h1M16,20h1M17,20h1M18,20h1M19,20h1M20,20h1M22,20h1M23,20h1M24,20h1M0,21h1M2,21h1M3,21h1M4,21h1M6,21h1M8,21h1M9,21h1M12,21h1M13,21h1M17,21h1M18,21h1M20,21h1M21,21h1M22,21h1M23,21h1M24,21h1M0,22h1M2,22h1M3,22h1M4,22h1M6,22h1M8,22h1M9,22h1M10,22h1M13,22h1M14,22h1M21,22h1M22,22h1M24,22h1M0,23h1M6,23h1M10,23h1M12,23h1M13,23h1M15,23h1M16,23h1M18,23h1M19,23h1M20,23h1M21,23h1M24,23h1M0,24h1M1,24h1M2,24h1M3,24h1M4,24h1M5,24h1M6,24h1M8,24h1M9,24h1M12,24h1M14,24h1M17,24h1M19,24h1M20,24h1M21,24h1M22,24h1M23,24h1M24,24h1"
+d="M0,0h1M1,0h1M2,0h1M3,0h1M4,0h1M5,0h1M6,0h1M9,0h1M10,0h1M13,0h1M18,0h1M19,0h1M20,0h1M21,0h1M22,0h1M23,0h1M24,0h1M0,1h1M6,1h1M9,1h1M11,1h1M13,1h1M14,1h1M15,1h1M18,1h1M24,1h1M0,2h1M2,2h1M3,2h1M4,2h1M6,2h1M8,2h1M11,2h1M15,2h1M16,2h1M18,2h1M20,2h1M21,2h1M22,2h1M24,2h1M0,3h1M2,3h1M3,3h1M4,3h1M6,3h1M8,3h1M9,3h1M12,3h1M13,3h1M14,3h1M15,3h1M16,3h1M18,3h1M20,3h1M21,3h1M22,3h1M24,3h1M0,4h1M2,4h1M3,4h1M4,4h1M6,4h1M8,4h1M11,4h1M12,4h1M16,4h1M18,4h1M20,4h1M21,4h1M22,4h1M24,4h1M0,5h1M6,5h1M8,5h1M10,5h1M12,5h1M13,5h1M15,5h1M16,5h1M18,5h1M24,5h1M0,6h1M1,6h1M2,6h1M3,6h1M4,6h1M5,6h1M6,6h1M8,6h1M10,6h1M12,6h1M14,6h1M16,6h1M18,6h1M19,6h1M20,6h1M21,6h1M22,6h1M23,6h1M24,6h1M8,7h1M10,7h1M11,7h1M14,7h1M0,8h1M2,8h1M3,8h1M4,8h1M5,8h1M6,8h1M9,8h1M12,8h1M13,8h1M14,8h1M15,8h1M16,8h1M18,8h1M19,8h1M20,8h1M21,8h1M22,8h1M0,9h1M3,9h1M4,9h1M7,9h1M9,9h1M12,9h1M13,9h1M16,9h1M17,9h1M19,9h1M23,9h1M0,10h1M1,10h1M3,10h1M6,10h1M7,10h1M8,10h1M11,10h1M13,10h1M14,10h1M15,10h1M16,10h1M18,10h1M19,10h1M20,10h1M21,10h1M23,10h1M24,10h1M1,11h1M2,11h1M3,11h1M8,11h1M11,11h1M14,11h1M15,11h1M18,11h1M24,11h1M6,12h1M9,12h1M10,12h1M13,12h1M14,12h1M15,12h1M17,12h1M18,12h1M19,12h1M20,12h1M22,12h1M23,12h1M24,12h1M0,13h1M1,13h1M2,13h1M7,13h1M12,13h1M13,13h1M16,13h1M19,13h1M21,13h1M23,13h1M0,14h1M3,14h1M4,14h1M5,14h1M6,14h1M8,14h1M9,14h1M10,14h1M14,14h1M15,14h1M18,14h1M19,14h1M20,14h1M21,14h1M23,14h1M24,14h1M0,15h1M2,15h1M3,15h1M5,15h1M7,15h1M10,15h1M12,15h1M14,15h1M16,15h1M17,15h1M18,15h1M19,15h1M20,15h1M24,15h1M0,16h1M3,16h1M4,16h1M6,16h1M8,16h1M9,16h1M12,16h1M13,16h1M15,16h1M16,16h1M17,16h1M18,16h1M19,16h1M20,16h1M22,16h1M8,17h1M13,17h1M15,17h1M16,17h1M20,17h1M21,17h1M0,18h1M1,18h1M2,18h1M3,18h1M4,18h1M5,18h1M6,18h1M9,18h1M11,18h1M12,18h1M13,18h1M14,18h1M16,18h1M18,18h1M20,18h1M22,18h1M23,18h1M24,18h1M0,19h1M6,19h1M8,19h1M11,19h1M14,19h1M16,19h1M20,19h1M21,19h1M0,20h1M2,20h1M3,20h1M4,20h1M6,20h1M8,20h1M9,20h1M11,20h1M15,20h1M16,20h1M17,20h1M18,20h1M19,20h1M20,20h1M22,20h1M23,20h1M24,20h1M0,21h1M2,21h1M3,21h1M4,21h1M6,21h1M8,21h1M9,21h1M12,21h1M13,21h1M17,21h1M18,21h1M20,21h1M21,21h1M22,21h1M23,21h1M24,21h1M0,22h1M2,22h1M3,22h1M4,22h1M6,22h1M8,22h1M9,22h1M10,22h1M13,22h1M14,22h1M21,22h1M22,22h1M24,22h1M0,23h1M6,23h1M10,23h1M12,23h1M13,23h1M15,23h1M16,23h1M18,23h1M19,23h1M20,23h1M21,23h1M24,23h1M0,24h1M1,24h1M2,24h1M3,24h1M4,24h1M5,24h1M6,24h1M8,24h1M9,24h1M12,24h1M14,24h1M17,24h1M19,24h1M20,24h1M21,24h1M22,24h1M23,24h1M24,24h1"/></svg><span>spacefast.com</span></div>
   </section>
 
   <!-- ===================== Wrap up ===================== -->
