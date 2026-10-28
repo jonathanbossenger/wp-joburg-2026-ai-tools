@@ -26,6 +26,7 @@ A collection of WordPress AI tools and processes that I use/recommend.
 - Agentic development
   - Hands down - WordPress Studio
   - https://developer.wordpress.com/studio/
+  - Enlarged Studio screenshot
   - Built-in WordPress AI Agent
   - Annotate feature
   - BYOK: Anthropic now, but more model support coming soon

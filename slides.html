@@ -139,6 +139,13 @@
   .slot.contain > img, .slot.contain > video { object-fit: contain; }
   .slot:has(> img, > video) { border-style: solid; border-color: var(--contrast); border-width: 1px; }
 
+  /* Screenshot slides: the image is the focus, so the heading stays small */
+  .body.shot { padding: 24px 0 88px; }
+  .body.shot > * { align-self: center; width: calc(630px * var(--ratio)); }
+  .body.shot h2 { font-size: 44px; margin-bottom: 20px; }
+  .body.shot .slot { height: 630px; border: none; background: transparent; border-radius: 8px; box-shadow: 0 16px 48px rgba(26, 26, 26, .14); }
+  .body.shot .slot > img { background: transparent; }
+
   /* ---------- Layouts ---------- */
   .split { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center; }
   .split.wide-left { grid-template-columns: 1.25fr 1fr; }
@@ -319,7 +326,7 @@
             <li>Find me online at <a href="https://jonathanbossenger.com/">jonathanbossenger.com</a>.</li>
           </ul>
         </div>
-        <figure class="slot" style="height:520px; margin-bottom: 120px;" data-label="Headshot&#10;images/headshot.jpg">
+        <figure class="slot" style="width:520px; height:520px; justify-self:center; margin-bottom: 120px;" data-label="Headshot&#10;images/headshot.jpg">
           <img src="images/headshot.jpg" alt="Jonathan Bossenger" onerror="this.remove()">
         </figure>
       </div>
@@ -442,12 +449,22 @@
           <p class="lede">The agentic local development tool for WordPress.</p>
           <p style="margin-top:36px"><a class="link" href="https://developer.wordpress.com/studio/">developer.wordpress.com/studio</a></p>
         </div>
-        <figure class="slot contain" style="height:440px; margin-bottom:150px" data-label="Studio screenshot&#10;images/studio.png">
-          <img src="images/studio.png" alt="WordPress Studio" onerror="this.remove()">
+        <figure class="slot contain" style="aspect-ratio:1600/932; border:none; background:transparent; margin-bottom:150px" data-label="Studio screenshot&#10;images/wordpress-studio.png">
+          <img src="images/wordpress-studio.png" alt="WordPress Studio" style="background:transparent" onerror="this.remove()">
         </figure>
       </div>
     </div>
     <div class="qr"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 31 31" shape-rendering="crispEdges"><path fill="#FFFFFF" d="M0 0h31v31H0z"/><path stroke="#1A1A1A" d="M1 1.5h7m1 0h1m1 0h2m2 0h1m2 0h1m4 0h7M1 2.5h1m5 0h1m1 0h4m1 0h2m3 0h3m1 0h1m5 0h1M1 3.5h1m1 0h3m1 0h1m1 0h3m1 0h4m2 0h3m1 0h1m1 0h3m1 0h1M1 4.5h1m1 0h3m1 0h1m4 0h1m1 0h1m2 0h2m2 0h1m1 0h1m1 0h3m1 0h1M1 5.5h1m1 0h3m1 0h1m1 0h1m2 0h4m1 0h2m1 0h1m2 0h1m1 0h3m1 0h1M1 6.5h1m5 0h1m2 0h2m2 0h2m3 0h1m3 0h1m5 0h1M1 7.5h7m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h7M10 8.5h2m2 0h1m2 0h1m1 0h1m1 0h1M1 9.5h1m2 0h6m6 0h1m1 0h1m1 0h3m2 0h1m1 0h3M1 10.5h4m1 0h1m1 0h4m2 0h3m2 0h2m3 0h2m1 0h2M1 11.5h3m3 0h5m1 0h2m1 0h1m1 0h1m4 0h1m1 0h1m1 0h1M5 12.5h2m2 0h1m3 0h1m1 0h1m2 0h1m1 0h2m1 0h1m1 0h2m2 0h1M1 13.5h3m3 0h1m5 0h4m4 0h1m1 0h2m4 0h1M8 14.5h1m2 0h1m3 0h3m5 0h7M1 15.5h2m1 0h2m1 0h5m1 0h1m1 0h2m1 0h4m5 0h1m1 0h1M4 16.5h3m3 0h1m1 0h6m2 0h1m1 0h1m1 0h2m1 0h1m1 0h1M2 17.5h3m2 0h4m1 0h2m2 0h2m8 0h1M1 18.5h1m1 0h1m4 0h2m3 0h1m2 0h1m1 0h1m1 0h3m2 0h1m1 0h2M1 19.5h2m1 0h2m1 0h1m3 0h2m1 0h3m2 0h5m1 0h2m2 0h1M1 20.5h2m1 0h1m1 0h1m1 0h2m2 0h1m1 0h1m1 0h2m6 0h4M1 21.5h3m3 0h2m1 0h3m1 0h1m2 0h3m1 0h8M9 22.5h2m2 0h2m1 0h4m1 0h1m3 0h2M1 23.5h7m1 0h1m1 0h1m1 0h2m1 0h2m2 0h2m1 0h1m1 0h2M1 24.5h1m5 0h1m1 0h1m2 0h3m3 0h2m1 0h1m3 0h1m2 0h1M1 25.5h1m1 0h3m1 0h1m1 0h1m1 0h2m1 0h1m2 0h1m2 0h7m2 0h1M1 26.5h1m1 0h3m1 0h1m1 0h1m2 0h1m1 0h4m1 0h2m1 0h1m6 0h1M1 27.5h1m1 0h3m1 0h1m2 0h3m1 0h1m1 0h1m1 0h3m1 0h1m1 0h2m1 0h3M1 28.5h1m5 0h1m4 0h1m3 0h1m3 0h1m1 0h2m1 0h3m1 0h1M1 29.5h7m1 0h1m2 0h3m5 0h2m3 0h1"/></svg><span>Get Studio</span></div>
+  </section>
+
+  <section class="slide">
+    <div class="top"><span class="eyebrow">Agentic development</span><span class="meta">WordCamp Johannesburg · 2026</span></div>
+    <div class="body shot" style="--ratio:1600/932">
+      <h2>A closer look at <em>Studio</em></h2>
+      <figure class="slot contain" data-label="Studio screenshot&#10;images/wordpress-studio.png">
+        <img src="images/wordpress-studio.png" alt="WordPress Studio with the AI agent chat beside a live site preview" onerror="this.remove()">
+      </figure>
+    </div>
   </section>
 
   <section class="slide">
@@ -466,10 +483,10 @@
 
   <section class="slide">
     <div class="top"><span class="eyebrow">Agentic development</span><span class="meta">WordCamp Johannesburg · 2026</span></div>
-    <div class="body" style="padding-bottom:96px">
-      <h2 style="font-size:64px; margin-bottom:28px">The <em>Annotate</em> feature</h2>
-      <figure class="slot contain" style="height:560px" data-label="Annotate feature screenshot or GIF&#10;images/studio-annotate.png">
-        <img src="images/studio-annotate.png" alt="Studio annotate feature" onerror="this.remove()">
+    <div class="body shot" style="--ratio:1920/1118">
+      <h2>The <em>Annotate</em> feature</h2>
+      <figure class="slot contain" data-label="Annotate feature screenshot or GIF&#10;images/wordpress-studio-annotate.png">
+        <img src="images/wordpress-studio-annotate.png" alt="Studio annotate feature" onerror="this.remove()">
       </figure>
     </div>
   </section>
@@ -605,8 +622,8 @@
           </div>
           <p class="lede" style="font-size:28px">Raspberry Pi, RISC-V boards, Android, Docker… <strong>practically anything.</strong></p>
         </div>
-        <figure class="slot" style="height:440px; margin-bottom:150px" data-label="Photo of your PicoClaw device&#10;images/picoclaw-device.jpg">
-          <img src="images/picoclaw-device.jpg" alt="PicoClaw hardware" onerror="this.remove()">
+        <figure class="slot" style="width:440px; height:440px; justify-self:center; margin-bottom:150px" data-label="Photo of your PicoClaw device&#10;images/pico-claw-raspberry-pi.jpg">
+          <img src="images/pico-claw-raspberry-pi.jpg" alt="PicoClaw running on a Raspberry Pi" onerror="this.remove()">
         </figure>
       </div>
     </div>
@@ -637,22 +654,10 @@
   </section>
 
   <section class="slide">
-    <div class="top"><span class="eyebrow">Backup demo</span><span class="meta">WordCamp Johannesburg · 2026</span></div>
-    <div class="body" style="padding-bottom:96px">
-      <h2 style="font-size:56px; margin-bottom:24px">In case the <em>Wi-Fi</em> has other plans…</h2>
-      <div style="display:grid; grid-template-columns: 1.4fr 1fr; gap:24px; height:560px">
-        <figure class="slot contain" data-label="Recorded demo video&#10;images/demo.mp4">
-          <video src="images/demo.mp4" controls preload="metadata" onerror="this.remove()"></video>
-        </figure>
-        <div style="display:grid; grid-template-rows:1fr 1fr; gap:24px">
-          <figure class="slot contain" data-label="Discord conversation&#10;images/demo-discord.png">
-            <img src="images/demo-discord.png" alt="Discord conversation with PicoClaw" onerror="this.remove()">
-          </figure>
-          <figure class="slot contain" data-label="Email sent by the agent&#10;images/demo-email.png">
-            <img src="images/demo-email.png" alt="Email sent via AgentMail" onerror="this.remove()">
-          </figure>
-        </div>
-      </div>
+    <div class="top"><span class="eyebrow">Personal agent</span><span class="meta">WordCamp Johannesburg · 2026</span></div>
+    <div class="body">
+      <h2>Let's chat to <em>PsykroClaw</em> on Discord</h2>
+      <p><a class="link" href="https://discord.com/channels/1503039896288362566/1503039896854597745">Chat with PsykroClaw</a></p>
     </div>
   </section>
 
