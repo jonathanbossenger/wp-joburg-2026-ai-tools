@@ -25,7 +25,7 @@ A collection of WordPress AI tools and processes that I use/recommend.
     - https://mcp-plugin-review.space.fast/
 - Agentic development
   - Hands down - WordPress Studio
-  - https://developer.wordpress.com/studio/
+  - https://wordpress.studio/
   - Enlarged Studio screenshot
   - Built-in WordPress AI Agent
   - Annotate feature
