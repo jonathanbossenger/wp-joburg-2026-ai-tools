@@ -95,7 +95,7 @@
   h1 { font-size: 128px; }
   h2 { font-size: 92px; margin-bottom: 40px; }
   h3 { font-size: 40px; margin-bottom: 12px; }
-  em { font-style: italic; color: var(--accent); }
+  em { font-style: italic; color: #4B36C4; }
   .lede { font-size: 36px; line-height: 1.4; color: var(--muted); max-width: 1100px; }
   .lede strong { color: var(--contrast); font-weight: 600; }
   code, .mono { font-family: var(--mono); }
@@ -182,20 +182,26 @@
   .flow .step .num { display: block; font-family: var(--mono); font-size: 15px; color: var(--accent); letter-spacing: .1em; margin-bottom: 10px; }
   .flow .arrow { display: flex; align-items: center; padding: 0 14px; font-size: 32px; color: var(--accent); }
 
-  /* ---------- Dark variants: title-ish & section dividers ---------- */
-  .slide.dark { background: var(--contrast); color: #fff; }
-  .slide.dark .meta { color: #8A8D96; }
-  .slide.dark .foot { background: #000; }
-  .slide.dark em { color: #A9A0EE; }
-  .slide.dark .lede { color: #B9BBC4; }
-
-  .divider .num {
-    font-family: var(--mono); font-size: 22px; letter-spacing: .14em; color: #A9A0EE; margin-bottom: 28px;
+  /* ---------- Bright variants: section dividers & feature slides ----------
+     Light and high-contrast so they survive brightly lit rooms */
+  .slide.divider, .slide.bright { background: var(--elevated); color: var(--contrast); }
+  .slide.divider::before, .slide.bright::before {
+    content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 28px;
+    background: linear-gradient(180deg, var(--accent-hover), #3D6FE0);
   }
-  .divider h2 { font-size: 160px; margin-bottom: 28px; }
+  .divider .meta, .bright .meta { color: #3A3C42; }
+  .divider .eyebrow, .bright .eyebrow { font-weight: 700; }
+  .divider .lede, .bright .lede { color: #2E3036; font-weight: 500; }
+  .bright .live { color: #C62828; font-weight: 700; }
+  .bright .live::before { background: #C62828; }
+  .divider .num {
+    font-family: var(--mono); font-size: 26px; font-weight: 700; letter-spacing: .14em; color: #4B36C4; margin-bottom: 28px;
+  }
+  .divider h2 { font-size: 160px; margin-bottom: 28px; position: relative; z-index: 1; }
+  .divider .lede { position: relative; z-index: 1; }
   .divider .bignum {
     position: absolute; right: -20px; bottom: 40px;
-    font-family: var(--serif); font-size: 620px; line-height: .8; color: rgba(123,106,224,.14);
+    font-family: var(--serif); font-size: 620px; line-height: .8; color: rgba(106,87,209,.24);
     pointer-events: none;
   }
 
@@ -349,7 +355,7 @@
   </section>
 
   <!-- ===================== 01 · Site management ===================== -->
-  <section class="slide dark divider">
+  <section class="slide divider">
     <div class="top"><span class="eyebrow">Section</span><span class="meta">WordCamp Johannesburg · 2026</span></div>
     <div class="body">
       <p class="num">01 / 05</p>
@@ -418,7 +424,7 @@
   </section>
 
   <!-- ===================== 02 · Agentic development ===================== -->
-  <section class="slide dark divider">
+  <section class="slide divider">
     <div class="top"><span class="eyebrow">Section</span><span class="meta">WordCamp Johannesburg · 2026</span></div>
     <div class="body">
       <p class="num">02 / 05</p>
@@ -478,7 +484,7 @@
   </section>
 
   <!-- ===================== 03 · Model selection ===================== -->
-  <section class="slide dark divider">
+  <section class="slide divider">
     <div class="top"><span class="eyebrow">Section</span><span class="meta">WordCamp Johannesburg · 2026</span></div>
     <div class="body">
       <p class="num">03 / 05</p>
@@ -552,7 +558,7 @@
   </section>
 
   <!-- ===================== 04 · Finding skills ===================== -->
-  <section class="slide dark divider">
+  <section class="slide divider">
     <div class="top"><span class="eyebrow">Section</span><span class="meta">WordCamp Johannesburg · 2026</span></div>
     <div class="body">
       <p class="num">04 / 05</p>
@@ -581,7 +587,7 @@
   </section>
 
   <!-- ===================== 05 · Personal agent ===================== -->
-  <section class="slide dark divider">
+  <section class="slide divider">
     <div class="top"><span class="eyebrow">Section</span><span class="meta">WordCamp Johannesburg · 2026</span></div>
     <div class="body">
       <p class="num">05 / 05</p>
@@ -625,7 +631,7 @@
     </div>
   </section>
 
-  <section class="slide dark statement">
+  <section class="slide bright statement">
     <div class="top"><span class="eyebrow">Personal agent</span><span class="meta">WordCamp Johannesburg · 2026</span></div>
     <div class="body">
       <p class="live">Live demo</p>
@@ -643,7 +649,7 @@
   </section>
 
   <!-- ===================== Bonus · Spacefast ===================== -->
-  <section class="slide dark divider">
+  <section class="slide divider">
     <div class="top"><span class="eyebrow">Section</span><span class="meta">WordCamp Johannesburg · 2026</span></div>
     <div class="body">
       <p class="num">BONUS</p>
@@ -696,7 +702,7 @@
     </div>
   </section>
 
-  <section class="slide dark">
+  <section class="slide bright">
     <div class="top"><span class="eyebrow">Questions welcome</span><span class="meta">WordCamp Johannesburg · 2026</span></div>
     <div class="body">
       <h1 style="font-size:180px; margin-bottom:40px">Thank <em>you.</em></h1>
